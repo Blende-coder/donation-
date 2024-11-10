@@ -1,0 +1,107 @@
+body {
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  background: transparent;
+  height: 100vh; 
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  margin: 0; 
+}
+
+.m-goal {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  padding: 20px;
+  width: 320px;
+  text-align: center;
+  background: transparent; 
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3); 
+  z-index: 1;
+}
+
+.m-goal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #2193b0, #6dd5ed, #abecd6, #fbc2eb); 
+  background-size: 300% 300%;
+  animation: colorShift 10s ease-in-out infinite;
+  z-index: -2;
+  border-radius: 12px;
+  opacity: 0.7;
+}
+
+.m-goal::after {
+  content: '';
+  position: absolute;
+  top: -200%;
+  left: 0;
+  width: 200%;
+  height: 400%;
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+  background-size: 20px 20px;
+  transform: rotate(45deg);
+  animation: rainLines 4s linear infinite;
+  z-index: -1;
+  pointer-events: none;
+  border-radius: 12px;
+}
+
+@keyframes rainLines {
+  0% { transform: translateY(0) rotate(45deg); }
+  100% { transform: translateY(100%) rotate(45deg); }
+}
+
+@keyframes colorShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.e-current,
+.e-total {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  padding: 5px;
+}
+
+.e-current span,
+.e-total span {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.e-bar {
+  position: relative;
+  width: 100%;
+  height: 14px;
+  background: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0 12px;
+}
+
+.inside {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #4caf50, #81c784);
+  border-radius: 10px 0 0 10px;
+  transition: width 1s ease;
+}
