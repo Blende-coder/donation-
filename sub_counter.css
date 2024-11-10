@@ -1,0 +1,39 @@
+.goal-cont {
+    color: white;
+    padding: 5px;
+    border-radius: 12px;
+    width: 220px; 
+    height: 50px;
+    font-family: 'Bahnschrift Condensed', sans-serif; 
+    background: linear-gradient(45deg, rgba(33, 147, 176, 0.7), rgba(109, 213, 237, 0.7), rgba(171, 236, 214, 0.7), rgba(251, 194, 235, 0.7));
+    background-size: 200% 200%; 
+    animation: gradientAnimation 5s ease infinite; 
+  
+    display: flex; 
+    align-items: center;
+    justify-content: space-between; 
+    font-size: 22px; 
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#goal-bar {
+    display: flex;
+  	font-size: 35px;
+}
+
+#goal-current, #goal-total {
+    font-size: 40px; 
+}
+
+
