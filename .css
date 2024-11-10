@@ -9,7 +9,6 @@ body {
   align-items: center; 
   margin: 0; 
 }
-
 .m-goal {
   position: relative;
   overflow: hidden;
@@ -21,7 +20,6 @@ body {
   box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3); 
   z-index: 1;
 }
-
 .m-goal::before {
   content: '';
   position: absolute;
@@ -36,7 +34,6 @@ body {
   border-radius: 12px;
   opacity: 0.7;
 }
-
 .m-goal::after {
   content: '';
   position: absolute;
@@ -52,25 +49,21 @@ body {
   pointer-events: none;
   border-radius: 12px;
 }
-
 @keyframes rainLines {
   0% { transform: translateY(0) rotate(45deg); }
   100% { transform: translateY(100%) rotate(45deg); }
 }
-
 @keyframes colorShift {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
-
 .wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
 }
-
 .e-current,
 .e-total {
   font-size: 18px;
@@ -78,14 +71,12 @@ body {
   color: #333;
   padding: 5px;
 }
-
 .e-current span,
 .e-total span {
   font-size: 20px;
   font-weight: bold;
   color: #333;
 }
-
 .e-bar {
   position: relative;
   width: 100%;
@@ -95,7 +86,6 @@ body {
   overflow: hidden;
   margin: 0 12px;
 }
-
 .inside {
   position: absolute;
   left: 0;
